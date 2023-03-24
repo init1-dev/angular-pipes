@@ -1,0 +1,99 @@
+
+<div class="text-layout">
+    <h1>Pipes básicos</h1>
+    <p>
+        Pipes incluídos en Angular - Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card 
+            header="uppercase"
+            subheader="{{ 'nombreLower: ' + nombreLower }}"
+        >
+            nombreLower | uppercase: {{ nombreLower | uppercase }}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card 
+            header="lowercase"
+            subheader="{{ 'nombreUpper: ' + nombreUpper }}"
+        >
+            nombreUpper | lowercase: {{ nombreUpper | lowercase }}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card 
+            header="titlecase"
+            subheader="{{ 'nombreCompleto: ' + nombreCompleto}}"
+        >
+            nombreCompleto | titlecase: {{ nombreCompleto | titlecase }}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | fecha | Pipe</h1>
+    <p>
+        Pipe para mostrar las fechas.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card >
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date: 'short'</li>
+                <li>fecha | date: 'long'</li>
+                <li>fecha | date: 'd/MM/y'</li>
+                <li>fecha | date: 'y G'</li>
+                <li>fecha | date: 'GGGG y'</li>
+                <li>fecha | date: 'H:mm:ss z'</li>
+                <li>fecha | date: 'MMMM dd, yyyy'</li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>fecha | date:'long' :'gmt-2'</li>
+                <li>fecha | date:'long' :'gmt-6'</li>
+                <li>fecha | date:'long' :'gmt-6':'en'</li>
+                <li>fecha | date:'long' :'' :'en'</li>
+                <li>fecha | date:'long' :'' :'fr'</li>
+            </ul>
+
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card >
+            <ul>
+                <li>{{ fecha }}</li>
+                <li>{{ fecha | date }}</li>
+                <li>{{ fecha | date: 'short' }}</li>
+                <li>{{ fecha | date: 'long' }}</li>
+                <li>{{ fecha | date: 'd/MM/y' }}</li>
+                <li>{{ fecha | date: 'y G' }}</li>
+                <li>{{ fecha | date: 'GGGG y' }}</li>
+                <li>{{ fecha | date: 'H:mm:ss z' }}</li>
+                <li>{{ fecha | date: 'MMMM dd, yyyy' }}</li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>{{ fecha | date:'long' :'gmt-2' }}</li>
+                <li>{{ fecha | date:'long' :'gmt-6' }}</li>
+                <li>{{ fecha | date:'long' :'gmt-6':'en' }}</li>
+                <li>{{ fecha | date:'long' :'' :'en' }}</li>
+                <li>{{ fecha | date:'long' :'' :'fr' }}</li>
+            </ul>
+
+        </p-card>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+
+<div class="text-layout">
+    <h1>DecimalPipe y Porcentaje</h1>
+    <p>
+        Pipes incluídos en Amgular - Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="text-layout">
+    <h1>number | decimal | currency</h1>
+    <p>
+        Pipes para manipulación de números.
+    </p>
+</div>
+
+<div class="grid">
+    <!-- NUMBER | DECIMALES -->
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card 
+            header=""
+            subheader=""
+        >
+        <ul>
+            <li>ventasNetas | number:'1.2-2'</li>
+            <li>(ventasNetas + 1000000) | number:'1.2-2'</li>
+        </ul>
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card 
+            header=""
+            subheader=""
+        >
+        <ul>
+            <li>
+                <i class="pi pi-dollar"></i>
+                {{ ventasNetas | number:'1.2-2' }}
+            </li>
+            <li>
+                <i class="pi pi-dollar"></i>
+                {{ (ventasNetas + 1000000) | number:'1.2-2' }}
+            </li>
+        </ul>
+        </p-card>
+    </div>
+
+    <!-- CURRENCY -->
+
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card 
+            header=""
+            subheader=""
+        >
+        <ul>
+            <li>
+                ventasNetas | currency:'USD':'symbol-narrow':'1.4-4'
+            </li>
+        </ul>
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card 
+            header=""
+            subheader=""
+        >
+        <ul>
+            <li>
+                {{ ventasNetas | currency:'USD':'symbol-narrow':'1.4-4' }}
+            </li>
+        </ul>
+        </p-card>
+    </div>
+
+    <!-- CURRENCY -->
+
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card 
+            header=""
+            subheader=""
+        >
+        <ul>
+            <li>porcentaje | percent</li>
+            <li>porcentaje | percent:'1.2-2'</li>
+        </ul>
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card 
+            header=""
+            subheader=""
+        >
+        <ul>
+            <li>{{ porcentaje | percent }}</li>
+            <li>{{ porcentaje | percent:'1.2-2' }}</li>
+        </ul>
+        </p-card>
+    </div>
+    
+</div>
