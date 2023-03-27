@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
@@ -8,18 +9,29 @@ import { NumerosComponent } from './pages/numeros/numeros.component';
 import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { VuelaPipe } from './pipes/vuela.pipe';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
+
 
 
 @NgModule({
   declarations: [
+    // Components
     NumerosComponent,
     NoComunesComponent,
     BasicosComponent,
-    OrdenarComponent
+    OrdenarComponent,
+    
+    // Pipes
+    MayusculasPipe,
+    VuelaPipe,
+    OrdenarPipe
   ],
   imports: [
     CommonModule,
-    PrimeNgModule
+    PrimeNgModule,
+    BrowserAnimationsModule
   ],
   exports: [
     NumerosComponent,
